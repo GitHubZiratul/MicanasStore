@@ -6,6 +6,10 @@
 <body>
 <hi>By Micana</hi><hr>
 <h4>Список игр доступных для покупок</h4>
+<form action="/" method="get">
+    Поиск по названию игры: <input type="text" name="title"/><br>
+    <input type="submit" value="Поиск"/>
+</form>
 <#list products as product>
     <div>
         <p>
