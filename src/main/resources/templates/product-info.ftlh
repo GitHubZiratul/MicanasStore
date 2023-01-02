@@ -12,7 +12,6 @@
 <b>Издатель товара </b>${product.author}<br>
 <b>Жанр </b>${product.genre}<br>
 <hr>
-<h3>Создать новый товар</h3>
 <form action="/product/delete/${product.id}" method="post">
     <input type="submit" value="Удалить">
 </form>

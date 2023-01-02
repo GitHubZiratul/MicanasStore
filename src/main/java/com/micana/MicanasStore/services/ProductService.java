@@ -19,7 +19,7 @@ public class ProductService {
 
     public List<Product> listProducts(String title) {
 
-        if ( title !=null) productRepository.findByTitle(title);
+        if ( title !=null) return productRepository.findByTitle(title);
 
         return productRepository.findAll(); }
 

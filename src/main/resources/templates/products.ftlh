@@ -19,6 +19,8 @@
             ${product.price} | <a href="/product/${product.id}">Подробнее о товаре</a>
         </p>
     </div>
+    <#else >
+    <h3>Товаров нет</h3>
 </#list>
 <hr>
 <h3>Создать новый товар</h3>
