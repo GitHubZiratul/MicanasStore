@@ -4,16 +4,19 @@
     <title>Micana</title>
 </head>
 <body>
-<hi>By Micana</hi><hr>
-<h4>Информация о товаре </h4>
-<b>Название товара </b>${product.title}<br>
-<b>Описание товара </b>${product.description}<br>
-<b>Цена товара </b>${product.price}<br>
-<b>Издатель товара </b>${product.author}<br>
-<b>Жанр </b>${product.genre}<br>
+<h1>MICANA</h1><hr>
+<h4>Подробная информация о игре</h4>
+<#list images as img>
+    <img src="/images/${img.id}" height="60px"/><br><br>
+</#list>
+<b>Название товара: </b>${product.title}<br>
+<b>Описание товара: </b>${product.description}<br>
+<b>Цена: </b>${product.price}<br>
+<b>Жанр: </b>${product.genre}<br>
+<b>Издатель: </b>${product.author}<br>
 <hr>
 <form action="/product/delete/${product.id}" method="post">
-    <input type="submit" value="Удалить">
+    <input type="submit" value="Удалить товар"/>
 </form>
 </body>
 </html>
