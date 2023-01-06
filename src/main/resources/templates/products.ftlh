@@ -4,7 +4,11 @@
     <title>MICANA</title>
 </head>
 <body>
-<h1>MICANA</h1><hr>
+<h1>MICANA | <a href="/login">Войти</a></h1><hr>
+<form action="/logout" method="post">
+    <input type="hidden" name="_csrf" value="${_csrf.token}">
+    <input type="submit" value="Выйти">
+</form>
 <h4>Все игры</h4>
 <form action="/" method="get">
     Поиск по названию игры: <input type="text" name="title"><br>
