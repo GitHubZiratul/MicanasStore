@@ -13,8 +13,9 @@
 <b>Описание товара: </b>${product.description}<br>
 <b>Цена: </b>${product.price}<br>
 <b>Жанр: </b>${product.genre}<br>
-<b>Автор: </b>${product.user.name}<br>
+<b>Автор: </b><a href="/user/${product.user.id}">${product.user.name}</a><br>
 <b>Номер телефона: </b>${product.user.numberPhone}<br>
+
 <hr>
 </body>
 </html>

@@ -12,6 +12,10 @@
     <input type="submit" value="Выйти">
     </form>
 
+    <#if user.isAdmin()>
+        <a href="/admin">Панель администратора</a>
+    </#if>
+
     <#else>
         <a href="/login">Войти</a></h1><hr>
     </#if>
