@@ -4,7 +4,6 @@ package com.micana.MicanasStore.services;
 import com.micana.MicanasStore.models.Image;
 import com.micana.MicanasStore.models.Product;
 import com.micana.MicanasStore.models.User;
-import com.micana.MicanasStore.repositories.ImageRepository;
 import com.micana.MicanasStore.repositories.ProductRepository;
 import com.micana.MicanasStore.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +13,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.security.Principal;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -54,7 +52,7 @@ public class ProductService {
     }
 
     public User getUserByPrincipal(Principal principal) {
-        if (principal==null) return new User();
+        if (principal == null) return new User();
         return userRepository.findByEmail(principal.getName());
     }
 
@@ -68,9 +66,10 @@ public class ProductService {
         return image;
     }
 
-    public void deleteProduct(Long id) {
+    public void deleteProduct( Long id) {
         productRepository.deleteById(id);
     }
+
 
     public Product getProductById(Long id) {
         return productRepository.findById(id).orElse(null);
